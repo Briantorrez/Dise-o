@@ -1,0 +1,360 @@
+/* ========================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #020515, #2e085a);
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ========================= */
+/* FORMULARIO */
+/* ========================= */
+
+.formulario {
+
+    width: 400px;
+    padding: 30px;
+
+    background: #e0e5ec;
+
+    border-radius: 20px;
+
+    /* SOMBRAS NEOMÓRFICAS EXTERIORES */
+
+    box-shadow:
+        10px 10px 20px #0073ff,
+        -10px -10px 20px #0b03ff;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* HOVER DEL FORMULARIO */
+
+.formulario:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        15px 15px 30px #bec3c9,
+        -15px -15px 30px #ffffff;
+}
+
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+.formulario h1 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #333;
+}
+
+
+/* ========================= */
+/* ETIQUETAS */
+/* ========================= */
+
+.formulario label {
+
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+/* ========================= */
+/* INPUTS Y TEXTAREA */
+/* ========================= */
+
+.formulario input,
+.formulario textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f1f1f1;
+
+    outline: none;
+
+    font-size: 15px;
+
+    /* INNER SHADOW */
+
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* HOVER DE LOS INPUTS */
+
+.formulario input:hover,
+.formulario textarea:hover {
+
+    /* SCALE */
+
+    transform: scale(1.15);
+
+    /* INNER SHADOW */
+
+    box-shadow:
+        inset 0 3px 90px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CUANDO HACEMOS CLIC */
+
+.formulario input:focus,
+.formulario textarea:focus {
+
+    /* INNER SHADOW */
+
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.25);
+
+    background: white;
+
+    /* TRANSFORM */
+
+    transform: scale(1.02);
+}
+
+
+/* ========================= */
+/* TEXTAREA */
+/* ========================= */
+
+.formulario textarea {
+
+    height: 100px;
+
+    resize: none;
+}
+
+
+/* ========================= */
+/* BOTÓN */
+/* ========================= */
+
+.formulario button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /* OUTER SHADOW */
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 1);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* HOVER DEL BOTÓN */
+
+.formulario button:hover {
+
+    /* SCALE */
+
+    transform: scale(1.05);
+
+    /* OUTER SHADOW */
+
+    box-shadow:
+        0 9px 20px rgba(0, 0, 0, 0.30);
+}
+
+
+/* BOTÓN PRESIONADO */
+
+.formulario button:active {
+
+    /* TRANSFORM */
+
+    transform:
+        translateY(2px) scale(0.98);
+
+    /* INNER SHADOW */
+
+    box-shadow:
+        inset 0 3px 7px rgba(0, 0, 0, 0.30);
+}
+
+
+/* ========================= */
+/* IMAGEN DEL FORMULARIO */
+/* ========================= */
+
+.imagen-formulario {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+
+/* ========================= */
+/* IMAGEN */
+/* ========================= */
+
+.imagen-formulario img {
+
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+
+    position: relative;
+
+    /* BOX-SHADOW EXTERIOR */
+
+    box-shadow:
+        8px 8px 16px #bec3c9,
+        -8px -8px 16px #ffffff;
+
+    /* DROP-SHADOW */
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(102, 126, 234, 0.4)
+        );
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* ========================= */
+/* INNER SHADOW DE LA IMAGEN */
+/* ========================= */
+
+/*
+    ::after crea una capa encima
+    de la imagen para poder aplicar
+    la sombra interna.
+*/
+
+.imagen-formulario::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 20px;
+
+    pointer-events: none;
+
+    /* INNER SHADOW */
+
+    box-shadow:
+        inset 5px 5px 12px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 12px rgba(255, 255, 255, 0.35);
+}
+
+
+/* ========================= */
+/* HOVER DE LA IMAGEN */
+/* ========================= */
+
+.imagen-formulario:hover img {
+
+    /* SCALE */
+
+    transform: scale(1.08);
+
+    /* BOX-SHADOW MÁS FUERTE */
+
+    box-shadow:
+        10px 10px 20px #043570,
+        -10px -10px 20px #530303;
+
+    /* DROP-SHADOW MÁS FUERTE */
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(102, 126, 234, 0.7)
+        );
+}
+
+
+/* ========================= */
+/* INNER SHADOW AL HACER HOVER */
+/* ========================= */
+
+.imagen-formulario:hover::after {
+
+    box-shadow:
+        inset 7px 7px 15px rgba(9, 12, 218, 0.4),
+        inset -7px -7px 15px rgba(230, 8, 8, 0.4);
+}
