@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Práctica de Pseudo-clases CSS</title>
+
+    <link rel="stylesheet" href="ej3.css">
+    <script src="ej3.js" ></script>
+</head>
+
+<body>
+
+    <!-- ============================== -->
+    <!-- HEADER -->
+    <!-- ============================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            BT
+        </div>
+
+        <nav class="nav">
+
+            <a href="#inicio" data-i18n="inicio">
+                Inicio
+            </a>
+
+            <a href="#perfil" data-i18n="perfil">
+                Perfil
+            </a>
+
+            <a href="#preferencias" data-i18n="preferencias">
+                Preferencias
+            </a>
+
+            <a href="#contacto" data-i18n="contacto">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <!-- IDIOMA -->
+
+        <div class="selector-idioma">
+
+            <label for="idioma" data-i18n="idiomas">
+                Idiomas 🌐
+            </label>
+
+            <select id="idioma">
+
+                <option value="es">
+                    Español
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="fr">
+                    Français
+                </option>
+
+                <option value="ar">
+                    العربية
+                </option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================== -->
+    <!-- CONTENIDO -->
+    <!-- ============================== -->
+
+    <main>
+
+
+        <!-- ========================== -->
+        <!-- INICIO -->
+        <!-- ========================== -->
+
+        <section id="inicio" class="seccion inicio">
+
+            <div class="contenido">
+
+                <span class="etiqueta" data-i18n="etiqueta">
+                    CSS INTERACTIVO
+                </span>
+
+                <h1>
+                    <span data-i18n="aprende">
+                        Aprende
+                    </span>
+
+                    <span>CSS</span>
+
+                    <span data-i18n="pseudo">
+                        con pseudo-clases
+                    </span>
+                </h1>
+
+                <p data-i18n="descripcionInicio">
+                    En esta página puedes practicar diferentes
+                    pseudo-clases de CSS sin utilizar JavaScript.
+                </p>
+
+                <a href="#preferencias"
+                   class="boton"
+                   data-i18n="comenzar">
+                    Comenzar práctica
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================== -->
+        <!-- PERFIL -->
+        <!-- ========================== -->
+
+        <section id="perfil" class="seccion">
+
+            <div class="contenido">
+
+                <h2 data-i18n="miPerfil">
+                    Mi perfil
+                </h2>
+
+                <div class="perfil-card">
+
+                    <div class="avatar">
+                        BT
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Brahian Torres
+                        </h3>
+
+                        <p data-i18n="estudiante">
+                            Estudiante de desarrollo de software.
+                        </p>
+
+                        <a href="https://github.com"
+                           target="_blank"
+                           data-i18n="verGithub">
+                            Ver GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================== -->
+        <!-- PREFERENCIAS -->
+        <!-- ========================== -->
+
+        <section id="preferencias" class="seccion">
+
+            <div class="contenido">
+
+                <h2 data-i18n="tituloPreferencias">
+                    Preferencias
+                </h2>
+
+                <p class="descripcion"
+                   data-i18n="descripcionPreferencias">
+                    Selecciona las opciones que prefieras.
+                </p>
+
+
+                <!-- CHECKBOX -->
+
+                <div class="grupo">
+
+                    <h3 data-i18n="notificaciones">
+                        Notificaciones
+                    </h3>
+
+
+                    <label class="opcion">
+
+                        <input type="checkbox"
+                               name="correo">
+
+                        <span class="check"></span>
+
+                        <div>
+
+                            <strong data-i18n="correo">
+                                Correo electrónico
+                            </strong>
+
+                            <p data-i18n="descripcionCorreo">
+                                Recibir información por correo.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="opcion">
+
+                        <input type="checkbox"
+                               name="notificaciones">
+
+                        <span class="check"></span>
+
+                        <div>
+
+                            <strong data-i18n="alertas">
+                                Notificaciones
+                            </strong>
+
+                            <p data-i18n="descripcionAlertas">
+                                Recibir alertas de la aplicación.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="opcion">
+
+                        <input type="checkbox"
+                               name="promociones">
+
+                        <span class="check"></span>
+
+                        <div>
+
+                            <strong data-i18n="promociones">
+                                Promociones
+                            </strong>
+
+                            <p data-i18n="descripcionPromociones">
+                                Recibir ofertas y novedades.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- MODO -->
+
+                <div class="grupo">
+
+                    <h3 data-i18n="modoPantalla">
+                        Modo de pantalla
+                    </h3>
+
+
+                    <label class="opcion">
+
+                        <input type="radio"
+                               name="modo"
+                               value="claro"
+                               checked>
+
+                        <span class="radio"></span>
+
+                        <div>
+
+                            <strong data-i18n="modoClaro">
+                                Modo claro
+                            </strong>
+
+                            <p data-i18n="descripcionClaro">
+                                Interfaz clara y luminosa.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="opcion">
+
+                        <input type="radio"
+                               name="modo"
+                               value="oscuro">
+
+                        <span class="radio"></span>
+
+                        <div>
+
+                            <strong data-i18n="modoOscuro">
+                                Modo oscuro
+                            </strong>
+
+                            <p data-i18n="descripcionOscuro">
+                                Interfaz oscura.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button class="guardar"
+                        id="botonTema"
+                        data-i18n="activarOscuro">
+
+                    🌙 Activar modo oscuro
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================== -->
+        <!-- CONTACTO -->
+        <!-- ========================== -->
+
+        <section id="contacto"
+                 class="seccion">
+
+            <div class="contenido">
+
+                <h2 data-i18n="contactoTitulo">
+                    Contacto
+                </h2>
+
+                <p data-i18n="contactoDescripcion">
+                    ¿Quieres conocer más sobre desarrollo web?
+                </p>
+
+
+                <div class="enlaces">
+
+                    <a href="https://github.com"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://developer.mozilla.org"
+                       target="_blank">
+                        MDN
+                    </a>
+
+                    <a href="mailto:correo@ejemplo.com"
+                       data-i18n="correoLink">
+                        Correo
+                    </a>
+
+                </div>
+
+
+                <a href="#inicio"
+                   class="boton"
+                   data-i18n="volver">
+
+                    Volver al inicio
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+/* ========================================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================================= */
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #ede9fe
+        );
+
+    color: #1e293b;
+}
+
+
+/* ========================================= */
+/* LTR */
+/* ========================================= */
+
+:dir(ltr) {
+
+    direction: ltr;
+}
+
+
+/* ========================================= */
+/* RTL */
+/* ========================================= */
+
+:dir(rtl) {
+
+    direction: rtl;
+}
+
+
+/* ========================================= */
+/* CONTENEDOR */
+/* ========================================= */
+
+.contenedor {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ========================================= */
+/* CAJA */
+/* ========================================= */
+
+.caja {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border: 4px solid;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease,
+        transform 0.4s ease;
+}
+
+
+/* ========================================= */
+/* COLOR LTR */
+/* ========================================= */
+
+:dir(ltr) .caja {
+
+    border-color: #0a389bec;
+
+    background-color: #eff6ff;
+
+    box-shadow:
+        0 20px 50px
+        rgba(37, 99, 235, 0.20);
+}
+
+
+/* ========================================= */
+/* COLOR RTL */
+/* ========================================= */
+
+:dir(rtl) .caja {
+
+    border-color: #9333ea;
+
+    background-color: #faf5ff;
+
+    box-shadow:
+        0 20px 50px
+        rgba(147, 51, 234, 0.20);
+}
+
+
+/* ========================================= */
+/* FOCUS-WITHIN */
+/* ========================================= */
+
+.caja:focus-within {
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* ========================================= */
+/* TÍTULO */
+/* ========================================= */
+
+.caja h1 {
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 35px;
+}
+
+
+.caja > p {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* ESTADO */
+/* ========================================= */
+
+.estado {
+
+    margin-bottom: 20px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    text-align: center;
+
+    border: 2px solid #e2e8f0;
+}
+
+
+/* LTR */
+
+:dir(ltr) .estado strong {
+
+    color: #2563eb;
+}
+
+
+/* RTL */
+
+:dir(rtl) .estado strong {
+
+    color: #9333ea;
+}
+
+
+/* ========================================= */
+/* CAMPO */
+/* ========================================= */
+
+.campo {
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    transition: 0.4s;
+}
+
+
+/* ========================================= */
+/* FOCUS-WITHIN */
+/* ========================================= */
+
+.campo:focus-within {
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* LTR */
+
+:dir(ltr) .campo:focus-within {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 99, 235, 0.15);
+}
+
+
+/* RTL */
+
+:dir(rtl) .campo:focus-within {
+
+    border-color: #9333ea;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(147, 51, 234, 0.15);
+}
+
+
+/* ========================================= */
+/* LABEL */
+/* ========================================= */
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* TEXTAREA */
+/* ========================================= */
+
+textarea {
+
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 15px;
+
+    resize: vertical;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #1e293b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    transition: 0.3s;
+}
+
+
+/* ========================================= */
+/* HOVER */
+/* ========================================= */
+
+textarea:hover {
+
+    border-color: #64748b;
+}
+
+
+/* ========================================= */
+/* FOCUS */
+/* ========================================= */
+
+textarea:focus {
+
+    outline: none;
+}
+
+
+/* ========================================= */
+/* FOCUS-VISIBLE */
+/* ========================================= */
+
+textarea:focus-visible {
+
+    outline: 3px solid #5a0462;
+
+    outline-offset: 3px;
+}
+
+
+/* ========================================= */
+/* LTR TEXTAREA */
+/* ========================================= */
+
+:dir(ltr) textarea {
+
+    direction: ltr;
+
+    text-align: left;
+
+    border-color: #0776f5;
+}
+
+
+/* ========================================= */
+/* RTL TEXTAREA */
+/* ========================================= */
+
+:dir(rtl) textarea {
+
+    direction: rtl;
+
+    text-align: right;
+
+    border-color: #d8b4fe;
+}
+
+
+/* ========================================= */
+/* PLACEHOLDER LTR */
+/* ========================================= */
+
+:dir(ltr) textarea::placeholder {
+
+    text-align: left;
+}
+
+
+/* ========================================= */
+/* PLACEHOLDER RTL */
+/* ========================================= */
+
+:dir(rtl) textarea::placeholder {
+
+    text-align: right;
+}
+
+
+/* ========================================= */
+/* BOTÓN */
+/* ========================================= */
+
+.boton {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.5s ease,
+        transform 0.2s,
+        box-shadow 0.5s ease;
+}
+
+
+/* ========================================= */
+/* BOTÓN LTR */
+/* ========================================= */
+
+:dir(ltr) .boton {
+
+    background-color: #2563eb;
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* ========================================= */
+/* BOTÓN RTL */
+/* ========================================= */
+
+:dir(rtl) .boton {
+
+    background-color: #9333ea;
+
+    box-shadow:
+        0 8px 20px
+        rgba(147, 51, 234, 0.25);
+}
+
+
+/* ========================================= */
+/* HOVER */
+/* ========================================= */
+
+.boton:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* LTR HOVER */
+
+:dir(ltr) .boton:hover {
+
+    background-color: #1d4ed8;
+}
+
+
+/* RTL HOVER */
+
+:dir(rtl) .boton:hover {
+
+    background-color: #7e22ce;
+}
+
+
+/* ========================================= */
+/* ACTIVE */
+/* ========================================= */
+
+.boton:active {
+
+    transform:
+        scale(0.95);
+}
+
+
+/* ========================================= */
+/* FOCUS */
+/* ========================================= */
+
+.boton:focus {
+
+    outline: none;
+}
+
+
+/* ========================================= */
+/* FOCUS-VISIBLE */
+/* ========================================= */
+
+.boton:focus-visible {
+
+    outline: 3px solid #f59e0b;
+
+    outline-offset: 4px;
+}
+
+
+/* ========================================= */
+/* RESULTADO */
+/* ========================================= */
+
+.resultado {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    border: 2px solid #e2e8f0;
+}
+
+
+.resultado strong {
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================= */
+/* LISTA */
+/* ========================================= */
+
+.lista {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.lista span {
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    background-color: #e0e7ff;
+
+    color: #3730a3;
+
+    font-family: monospace;
+
+    font-size: 12px;
+}
+
+
+/* ========================================= */
+/* RTL LISTA */
+/* ========================================= */
+
+:dir(rtl) .lista {
+
+    flex-direction: row-reverse;
+}
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        padding: 15px;
+    }
+
+
+    .caja {
+
+        padding: 25px 20px;
+    }
+
+}

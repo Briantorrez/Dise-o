@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pseudo-clases de enlaces</title>
+
+    <link rel="stylesheet" href="ej.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Mi página web</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+
+            <a href="https://www.google.com" target="_blank">
+                Google
+            </a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- INICIO -->
+        <!-- ========================= -->
+
+        <section id="inicio" class="seccion">
+
+            <h2>Inicio</h2>
+
+            <p>
+                Bienvenido a mi página. Aquí estamos
+                practicando las pseudo-clases de CSS.
+            </p>
+
+            <a href="#proyectos" class="boton">
+                Ver mis proyectos
+            </a>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- PROYECTOS -->
+        <!-- ========================= -->
+
+        <section id="proyectos" class="seccion">
+
+            <h2>Proyectos</h2>
+
+            <p>
+                Estos son algunos de mis proyectos
+                de desarrollo web.
+            </p>
+
+            <div class="proyectos">
+
+                <article>
+                    <h3>Proyecto 1</h3>
+                    <p>Página creada con HTML y CSS.</p>
+                    <a href="https://github.com">
+                        Ver proyecto
+                    </a>
+                </article>
+
+                <article>
+                    <h3>Proyecto 2</h3>
+                    <p>Aplicación creada con JavaScript.</p>
+                    <a href="https://developer.mozilla.org">
+                        Ver documentación
+                    </a>
+                </article>
+
+            </div>
+
+            <a href="#contacto" class="boton">
+                Ir a contacto
+            </a>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- CONTACTO -->
+        <!-- ========================= -->
+
+        <section id="contacto" class="seccion">
+
+            <h2>Contacto</h2>
+
+            <p>
+                Puedes encontrarme en mis redes
+                y proyectos.
+            </p>
+
+            <a href="mailto:correo@ejemplo.com">
+                Enviar correo
+            </a>
+
+            <br><br>
+
+            <a href="#inicio" class="boton">
+                Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

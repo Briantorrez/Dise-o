@@ -1,0 +1,591 @@
+/* ================================= */
+/* GENERAL */
+/* ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7fa;
+    color: #626060;
+
+    transition:
+        background-color 0.4s,
+        color 0.4s;
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    background-color: rgb(35, 36, 89);
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.4s;
+}
+
+
+/* ================================= */
+/* LOGO */
+/* ================================= */
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* ================================= */
+/* NAV */
+/* ================================= */
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: #f2d2d2;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #2563eb;
+}
+
+
+/* ================================= */
+/* IDIOMA */
+/* ================================= */
+
+.selector-idioma {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector-idioma label {
+    font-weight: bold;
+}
+
+.selector-idioma select {
+    padding: 8px 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* ================================= */
+/* SECCIONES */
+/* ================================= */
+
+.seccion {
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+.contenido {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* ================================= */
+/* INICIO */
+/* ================================= */
+
+.inicio {
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        white
+    );
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background-color: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+h1 {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    font-size: 55px;
+}
+
+h1 span:first-child {
+    color: #222;
+}
+
+h1 span:nth-child(3) {
+    color: #222;
+}
+
+h1 span:nth-child(2) {
+    color: #2563eb;
+}
+
+.inicio p {
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================= */
+/* BOTONES */
+/* ================================= */
+
+.boton,
+.guardar {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton:hover,
+.guardar:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================= */
+/* TÍTULOS */
+/* ================================= */
+
+h2 {
+    margin-bottom: 15px;
+
+    font-size: 40px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+
+    color: #666;
+}
+
+
+/* ================================= */
+/* PERFIL */
+/* ================================= */
+
+.perfil-card {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.4s;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.perfil-card a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ================================= */
+/* GRUPOS */
+/* ================================= */
+
+.grupo {
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.4s;
+}
+
+
+/* ================================= */
+/* OPCIONES */
+/* ================================= */
+
+.opcion {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.opcion:hover {
+    background-color: #f1f5f9;
+}
+
+.opcion input {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+}
+
+.opcion p {
+    margin-top: 5px;
+
+    color: #777;
+}
+
+
+/* ================================= */
+/* CONTACTO */
+/* ================================= */
+
+.enlaces {
+    display: flex;
+
+    gap: 20px;
+
+    margin: 30px 0;
+}
+
+.enlaces a {
+    padding: 12px 20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.enlaces a:hover {
+    background-color: #2563eb;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================= */
+/* ================================ */
+/* MODO OSCURO */
+/* ================================= */
+/* ================================= */
+
+body.modo-oscuro {
+    background-color: #121212;
+
+    color: white;
+}
+
+
+/* HEADER */
+
+body.modo-oscuro .header {
+    background-color: #1e1e1e;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* NAV */
+
+body.modo-oscuro .nav a {
+    color: white;
+}
+
+body.modo-oscuro .nav a:hover {
+    color: #60a5fa;
+}
+
+
+/* IDIOMA */
+
+body.modo-oscuro .selector-idioma label {
+    color: white;
+}
+
+body.modo-oscuro .selector-idioma select {
+    background-color: #2a2a2a;
+
+    color: white;
+
+    border-color: #555;
+}
+
+
+/* SECCIONES */
+
+body.modo-oscuro .seccion {
+    background-color: #121212;
+}
+
+
+/* INICIO */
+
+body.modo-oscuro .inicio {
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #121212
+    );
+}
+
+
+/* TÍTULOS */
+
+body.modo-oscuro h1 span:first-child,
+body.modo-oscuro h1 span:nth-child(3) {
+    color: white;
+}
+
+
+/* CARDS */
+
+body.modo-oscuro .perfil-card,
+body.modo-oscuro .grupo {
+    background-color: #1e1e1e;
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* TEXTOS */
+
+body.modo-oscuro p {
+    color: #d1d5db;
+}
+
+body.modo-oscuro .descripcion {
+    color: #aaa;
+}
+
+
+/* OPCIONES */
+
+body.modo-oscuro .opcion:hover {
+    background-color: #2a2a2a;
+}
+
+
+/* ENLACES */
+
+body.modo-oscuro .enlaces a {
+    background-color: #1e1e1e;
+
+    color: #60a5fa;
+}
+
+body.modo-oscuro .enlaces a:hover {
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+/* BOTÓN */
+
+body.modo-oscuro .guardar {
+    background-color: white;
+
+    color: #121212;
+}
+
+body.modo-oscuro .guardar:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .perfil-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .enlaces {
+        flex-direction: column;
+    }
+
+}
