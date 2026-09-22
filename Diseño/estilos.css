@@ -1,0 +1,225 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #12002b;
+    color: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #ff00cc, #3333ff);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0;
+    text-shadow: 3px 3px #000;
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+    background-color: #00e5ff;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: #12002b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 18px 30px;
+}
+
+nav a:hover {
+    background-color: #ffea00;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+
+    display: flex;
+    gap: 25px;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+article {
+    background-color: #24104f;
+    padding: 30px;
+    border-radius: 15px;
+
+    flex: 3;
+
+    border: 3px solid #ff00cc;
+    box-shadow: 0 0 15px #ff00cc;
+}
+
+article h2 {
+    color: #00e5ff;
+}
+
+
+/* =========================
+   FIGURE
+========================= */
+
+figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+
+    border-radius: 15px;
+
+    border: 4px solid #ffea00;
+
+    box-shadow: 0 0 20px #ffea00;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #ffea00;
+    font-weight: bold;
+}
+
+
+/* =========================
+   TARJETAS DE JUEGOS
+========================= */
+
+.juegos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.juego {
+    background-color: #ff00cc;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    flex: 1;
+
+    min-width: 150px;
+
+    box-shadow: 0 0 10px #ff00cc;
+}
+
+.juego h3 {
+    color: #ffea00;
+}
+
+
+/* =========================
+   ASIDE
+========================= */
+
+aside {
+    background-color: #35166b;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    flex: 1;
+
+    border: 3px solid #00e5ff;
+
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+aside h2 {
+    color: #ffea00;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   MENSAJE DEL ASIDE
+========================= */
+
+.mensaje {
+    background-color: #00e5ff;
+
+    color: #12002b;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 25px;
+}
+
+.mensaje h3 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #080014;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    border-top: 4px solid #ff00cc;
+}
+
+footer p {
+    margin: 8px;
+}
