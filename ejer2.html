@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fondo ULTRA Animado - Sin Desenfoque</title>
+  <style>
+    /* === RESET === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #020208;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* === CONTENEDOR PRINCIPAL DEL FONDO === */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: #03030a;
+      overflow: hidden;
+      animation: canvasZoom 18s ease-in-out infinite alternate;
+    }
+
+    /* === ESTILO BASE DE LOS MANCHONES / ORBES (SIN BLUR) === */
+    .blob {
+      position: absolute;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      /* filter: blur(50px); SE ELIMINA EL DESENFOQUE PARA VER LOS BORDES DEFINIDOS */
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    /* 1. Orbe Cyan Eléctrico */
+    .blob-cyan {
+      top: -10%;
+      left: -10%;
+      width: 65vw;
+      height: 65vw;
+      background: radial-gradient(circle, #00f0ff 0%, #0044ff 60%, transparent 80%);
+      mix-blend-mode: screen;
+      animation: 
+        morph 12s ease-in-out infinite alternate,
+        moveCyan 16s ease-in-out infinite alternate,
+        spin 25s linear infinite;
+    }
+
+    /* 2. Orbe Fuego / Naranja Neón */
+    .blob-orange {
+      bottom: -15%;
+      right: -10%;
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(circle, #ff0055 0%, #ff5500 50%, transparent 80%);
+      mix-blend-mode: screen;
+      animation: 
+        morph 15s ease-in-out infinite alternate-reverse,
+        moveOrange 20s ease-in-out infinite alternate-reverse,
+        spinReverse 30s linear infinite;
+    }
+
+    /* 3. Orbe Magenta / Violeta Intenso */
+    .blob-magenta {
+      top: 20%;
+      right: 10%;
+      width: 55vw;
+      height: 55vw;
+      background: radial-gradient(circle, #ff00d4 0%, #7000ff 70%, transparent 85%);
+      mix-blend-mode: color-dodge;
+      animation: 
+        morph 10s ease-in-out infinite alternate,
+        moveMagenta 14s ease-in-out infinite alternate;
+    }
+
+    /* 4. Orbe Amarillo / Neón Central */
+    .blob-yellow {
+      bottom: 10%;
+      left: 15%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, #ffe600 0%, #ff0055 60%, transparent 80%);
+      mix-blend-mode: hard-light;
+      animation: 
+        morph 14s ease-in-out infinite alternate-reverse,
+        moveYellow 18s ease-in-out infinite alternate;
+    }
+
+    /* === CAPAS DE TEXTURA === */
+
+    /* Rejilla de ondas giratorias */
+    .wave-grid {
+      position: absolute;
+      width: 250%;
+      height: 250%;
+      top: -75%;
+      left: -75%;
+      background: repeating-radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.12) 0px,
+        transparent 10px,
+        rgba(0, 240, 255, 0.08) 20px,
+        transparent 40px
+      );
+      mix-blend-mode: overlay;
+      animation: spin 35s linear infinite, gridPulse 8s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    /* Líneas diagonales deslizantes */
+    .sliding-lines {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 15px,
+        transparent 15px,
+        transparent 30px
+      );
+      mix-blend-mode: difference;
+      animation: slideLines 20s linear infinite;
+      pointer-events: none;
+    }
+
+    /* === KEYFRAMES === */
+
+    @keyframes morph {
+      0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      }
+      34% {
+        border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+      }
+      67% {
+        border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+      }
+      100% {
+        border-radius: 60% 40% 60% 40% / 50% 60% 30% 70%;
+      }
+    }
+
+    @keyframes moveCyan {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(25vw, 20vh) scale(1.2); }
+      100% { transform: translate(-10vw, 35vh) scale(0.85); }
+    }
+
+    @keyframes moveOrange {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-30vw, -25vh) scale(1.25); }
+      100% { transform: translate(10vw, -40vh) scale(0.9); }
+    }
+
+    @keyframes moveMagenta {
+      0% { transform: translate(0, 0) scale(0.9); }
+      50% { transform: translate(-20vw, 15vh) scale(1.3); }
+      100% { transform: translate(15vw, -20vh) scale(0.95); }
+    }
+
+    @keyframes moveYellow {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(20vw, -30vh) scale(1.15); }
+      100% { transform: translate(-15vw, 10vh) scale(0.8); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes spinReverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes slideLines {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    @keyframes canvasZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    @keyframes gridPulse {
+      0% { opacity: 0.3; }
+      100% { opacity: 0.8; }
+    }
+
+    /* === TARJETA === */
+    .glass-card {
+      position: relative;
+      background: rgba(8, 12, 28, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      padding: 3rem 2.5rem;
+      max-width: 550px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .glass-card h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #00f0ff, #ff00d4, #ffe600);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+
+    .glass-card p {
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animated-bg">
+    <div class="blob blob-cyan"></div>
+    <div class="blob blob-orange"></div>
+    <div class="blob blob-magenta"></div>
+    <div class="blob blob-yellow"></div>
+    <div class="wave-grid"></div>
+    <div class="sliding-lines"></div>
+  </div>
+
+  <main class="glass-card">
+    <h1>Bordes Definidos</h1>
+    <p>
+      Se ha removido el <code>filter: blur()</code> para mostrar las siluetas vectoriales dinámicas en movimiento.
+    </p>
+  </main>
+
+</body>
+</html>
