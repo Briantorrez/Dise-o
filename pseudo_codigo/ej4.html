@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LTR y RTL automático</title>
+
+    <link rel="stylesheet" href="ej4.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <section class="caja">
+
+            <h1>
+                Texto LTR / RTL
+            </h1>
+
+            <p>
+                Escribe un texto y presiona el botón
+                para cambiar automáticamente la dirección y el color.
+            </p>
+
+
+            <!-- ESTADO -->
+
+            <div class="estado">
+
+                Dirección actual:
+
+                <strong id="direccionTexto">
+                    LTR
+                </strong>
+
+            </div>
+
+
+            <!-- CAJA DE TEXTO -->
+
+            <div class="campo">
+
+                <label for="mensaje">
+                    Escribe tu mensaje
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    placeholder="Escribe algo aquí..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <button
+                id="botonDireccion"
+                class="boton"
+            >
+                Cambiar a RTL
+            </button>
+
+
+            <!-- INFORMACIÓN -->
+
+            <div class="resultado">
+
+                <strong>
+                    Pseudo-clases utilizadas:
+                </strong>
+
+                <div class="lista">
+
+                    <span>:hover</span>
+
+                    <span>:active</span>
+
+                    <span>:focus</span>
+
+                    <span>:focus-within</span>
+
+                    <span>:focus-visible</span>
+
+                    <span>:dir(ltr)</span>
+
+                    <span>:dir(rtl)</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        // =================================
+        // ELEMENTOS
+        // =================================
+
+        const boton =
+            document.getElementById("botonDireccion");
+
+        const direccionTexto =
+            document.getElementById("direccionTexto");
+
+
+        // =================================
+        // CAMBIAR DIRECCIÓN
+        // =================================
+
+        boton.addEventListener(
+            "click",
+            function () {
+
+                const html =
+                    document.documentElement;
+
+
+                // =================================
+                // SI ESTÁ EN LTR
+                // =================================
+
+                if (html.dir === "ltr") {
+
+                    html.dir = "rtl";
+
+                    direccionTexto.textContent = "RTL";
+
+                    boton.textContent =
+                        "Cambiar a LTR";
+
+                }
+
+
+                // =================================
+                // SI ESTÁ EN RTL
+                // =================================
+
+                else {
+
+                    html.dir = "ltr";
+
+                    direccionTexto.textContent = "LTR";
+
+                    boton.textContent =
+                        "Cambiar a RTL";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reto de Pseudoclases CSS</title>
+
+    <link rel="stylesheet" href="juego.css">
+</head>
+
+<body>
+
+    <div class="juego">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <div>
+                <h1>🎯 Reto de Pseudoclases CSS</h1>
+                <p>¿Cuánto sabes de CSS?</p>
+            </div>
+
+            <div class="marcador">
+                <span>⭐ Puntos</span>
+                <strong id="puntos">0</strong>
+            </div>
+
+        </header>
+
+
+        <!-- INFORMACIÓN DEL JUEGO -->
+        <section class="informacion">
+
+            <div class="dato">
+                ❤️ Vidas:
+                <span id="vidas">3</span>
+            </div>
+
+            <div class="dato">
+                🧠 Pregunta:
+                <span id="numeroPregunta">1</span>/10
+            </div>
+
+        </section>
+
+
+        <!-- BARRA DE PROGRESO -->
+        <div class="barra-contenedor">
+            <div id="barraProgreso"></div>
+        </div>
+
+
+        <!-- PREGUNTA -->
+        <main class="contenido">
+
+            <div class="pregunta">
+
+                <span class="etiqueta">PREGUNTA</span>
+
+                <h2 id="textoPregunta">
+                    ¿Qué pseudoclase selecciona el primer elemento?
+                </h2>
+
+            </div>
+
+
+           <!-- EJEMPLO VISUAL -->
+            <div class="ejemplo">
+
+                
+
+                <div class="codigo">
+
+                    <span class="selector">.caja</span>
+                    <span> p</span>
+                    <span class="pseudoclase">:first-child</span>
+                    <span> {</span>
+
+                    <br>
+
+                    <span class="propiedad">
+                        background-color: green;
+                    </span>
+
+                    <br>
+
+                    <span>}</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPCIONES -->
+            <div class="opciones" id="opciones">
+
+                <!-- JavaScript colocará las opciones aquí -->
+
+            </div>
+
+
+            <!-- MENSAJE -->
+            <div id="mensaje" class="mensaje"></div>
+
+
+            <!-- BOTÓN SIGUIENTE -->
+            <button id="siguiente" class="btn-siguiente">
+                Siguiente pregunta ➜
+            </button>
+
+        </main>
+
+
+        <!-- PANTALLA FINAL -->
+        <section id="resultado" class="resultado oculto">
+
+            <div class="trofeo">🏆</div>
+
+            <h2>¡Juego terminado!</h2>
+
+            <p>Tu puntuación fue:</p> 
+
+            <div class="puntuacion-final">
+                <span id="puntuacionFinal">0</span>
+                / 100
+            </div>
+
+            <p id="mensajeFinal"></p>
+
+            <button id="reiniciar" class="btn-reiniciar">
+                🔄 Jugar nuevamente
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <script src="juego.js"></script>
+
+</body>
+
+</html>

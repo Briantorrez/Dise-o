@@ -1,0 +1,430 @@
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #dbeafe,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e0e7ff,
+            transparent 35%
+        ),
+        #f8fafc;
+
+    color: #1e293b;
+}
+
+
+/* ============================= */
+/* CONTENEDOR */
+/* ============================= */
+
+.contenedor {
+    width: 100%;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ============================= */
+/* TARJETA */
+/* ============================= */
+
+.login-card {
+    width: 430px;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 40px rgba(15, 23, 42, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ============================= */
+/* HOVER */
+/* ============================= */
+
+.login-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 25px 50px rgba(15, 23, 42, 0.15);
+
+    border-color: #cbd5e1;
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.login-header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #64748b;
+}
+
+
+/* ============================= */
+/* FORMULARIO */
+/* ============================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+
+.campo input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+
+    background-color: #f8fafc;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ============================= */
+/* FOCUS */
+/* ============================= */
+
+.campo input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    background-color: white;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ============================= */
+/* FOCUS-WITHIN */
+/* ============================= */
+
+
+
+/* ============================= */
+/* OPCIONES */
+/* ============================= */
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+}
+
+.opciones a,
+.registro a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.opciones a:hover,
+.registro a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================= */
+/* CHECKBOX */
+/* ============================= */
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.recordar input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #2563eb;
+}
+
+
+/* ============================= */
+/* BOTÓN PRINCIPAL */
+/* ============================= */
+
+.btn-login {
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ============================= */
+/* HOVER DEL BOTÓN */
+/* ============================= */
+
+.btn-login:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ============================= */
+/* ACTIVE */
+/* ============================= */
+
+.btn-login:active {
+    transform: scale(0.97);
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* FOCUS-VISIBLE */
+/* ============================= */
+
+.btn-login:focus-visible {
+    outline: 3px solid #f59e0b;
+
+    outline-offset: 4px;
+}
+
+
+/* ============================= */
+/* SEPARADOR */
+/* ============================= */
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 28px 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #e2e8f0;
+}
+
+
+/* ============================= */
+/* REDES */
+/* ============================= */
+
+.redes {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-social {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* HOVER */
+
+.btn-social:hover {
+    background-color: #f8fafc;
+
+    border-color: #94a3b8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ACTIVE */
+
+.btn-social:active {
+    transform: scale(0.96);
+}
+
+
+/* FOCUS-VISIBLE */
+
+.btn-social:focus-visible {
+    outline: 3px solid #f59e0b;
+
+    outline-offset: 3px;
+}
+
+
+/* ============================= */
+/* REGISTRO */
+/* ============================= */
+
+.registro {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 500px) {
+
+    .contenedor {
+        padding: 15px;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 28px 22px;
+    }
+
+    .opciones {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+}
+
